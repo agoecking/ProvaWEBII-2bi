@@ -11,6 +11,10 @@ const routes: Routes = [
   },
   {
     path: '', component: CarroListarComponent
+  },
+  {
+    path: 'carro/listar',
+    component: CarroListarComponent
   }
 ];
 
