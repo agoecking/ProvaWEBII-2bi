@@ -1,0 +1,31 @@
+<mat-card class="card">
+    <mat-card-title> Novo Carro </mat-card-title>
+  </mat-card>
+  <div class="conteudo">
+    <mat-card id="nome" class="celula esquerda">
+      <mat-card-title>Insira os dados do Carro:</mat-card-title>
+      <div class="campos">
+        <div>
+          <mat-form-field class="campo">
+            <mat-label>Modelo</mat-label>
+            <input matInput name="modelo" [(ngModel)]="carro.modelo" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <mat-form-field class="campo">
+          <mat-label>Placa</mat-label>
+          <input matInput name="placa" [(ngModel)]="carro.placa" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="campo">
+          <mat-label>Ano</mat-label>
+          <input matInput name="ano" [(ngModel)]="carro.ano" />
+        </mat-form-field>
+      </div>
+    </mat-card>
+  </div>
+  
+  <button mat-raised-button color="warn" (click)="create()">Cadastrar</button>
+  

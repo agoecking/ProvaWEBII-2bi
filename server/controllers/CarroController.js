@@ -18,6 +18,23 @@ class CarroController {
           res.status(500).json(error);
       }
   }
+  async getById(req, res) {
+    try {
+      var result = await carro.findById(req.params.id);
+      res.status(200).json(result);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+
+  async getByPlaca(req, res) {
+    try {
+      var result = await carro.find({placa: req.params.placa});
+      res.status(200).json(result);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
 }
 
 module.exports = new CarroController();

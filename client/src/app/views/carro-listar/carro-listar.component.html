@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>#</th>
+    <th>Modelo</th>
+    <th>Placa</th>
+    <th>Ano</th>
+    <th>Criado em</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let carro of carros">
+    <td>{{carro._id}}</td>
+    <td>{{carro.modelo}}</td>
+    <td>{{carro.placa}}</td>
+    <td>{{carro.ano}}</td>
+    <td>{{carro.createdAt | date: "dd/MM/yyyy hh:mm"}}</td>
+  </tr>
+</table>
